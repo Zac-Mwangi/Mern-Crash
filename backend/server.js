@@ -7,6 +7,14 @@ const workoutRoutes = require("./routes/workouts");
 // express app
 const app = express();
 
+// cors
+const cors= require('cors');
+
+// Allow Cross-Origin Requests from all
+app.use(cors({
+  origin: '*'
+}));
+
 // middleware
 app.use(express.json());
 
