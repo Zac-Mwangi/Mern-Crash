@@ -15,7 +15,10 @@ const WorkoutForm = () => {
 
     const workout = { title, load, reps };
 
-    const response = await fetch("/api/workouts", {
+    const url = "https://mearn-app.onrender.com";
+
+
+    const response = await fetch(url + "/api/workouts", {
       method: "POST",
       body: JSON.stringify(workout),
       headers: {
